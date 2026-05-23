@@ -1,0 +1,6 @@
+{
+  "name": "FocusFlow",
+  "description": "Daily productivity companion with Focus Timer, Habit Tracking, Daily Planner, and Insights.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

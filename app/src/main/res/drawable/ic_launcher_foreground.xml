@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Outer Elegant Ring with a subtle gap (Zen circle style) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M 54,28 A 24,24 0 1,1 53.9,28" />
+    
+    <!-- Central Zen Lily/Lotus flower - Symmetrical, Premium, Peaceful -->
+    <!-- Center Petal -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 54,34 C 57,44 57,58 54,64 C 51,58 51,44 54,34 Z" />
+    
+    <!-- Left Petal -->
+    <path
+        android:fillColor="#CDFFFFFF"
+        android:pathData="M 54,42 C 45,43 40,52 44,61 C 48,56 50,54 54,51 Z" />
+    
+    <!-- Right Petal -->
+    <path
+        android:fillColor="#CDFFFFFF"
+        android:pathData="M 54,42 C 63,43 68,52 64,61 C 60,56 58,54 54,51 Z" />
+
+    <!-- Sleek horizontal base ripple/wave -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M 36,70 C 44,74 64,66 72,70" />
+</vector>
