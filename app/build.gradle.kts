@@ -20,6 +20,31 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
+  val keystoreFile = file("../keystore/focusflow-release.jks")
+  if (!keystoreFile.exists()) {
+    keystoreFile.parentFile.mkdirs()
+    try {
+      val pb = ProcessBuilder(
+        "keytool", "-genkeypair", "-v",
+        "-keystore", keystoreFile.absolutePath,
+        "-alias", "focusflow",
+        "-keyalg", "RSA",
+        "-keysize", "2048",
+        "-validity", "10000",
+        "-storepass", "Rohit@12501250",
+        "-keypass", "Rohit@12501250",
+        "-dname", "CN=FocusFlow, O=Aistudio, C=US"
+      )
+      val process = pb.start()
+      val exitCode = process.waitFor()
+      if (exitCode != 0) {
+        logger.error("Failed to generate release keystore via keytool: exit code $exitCode")
+      }
+    } catch (e: Exception) {
+      logger.error("Error generating release keystore: ${e.message}", e)
+    }
+  }
+
   signingConfigs {
     create("release") {
       storeFile = file("../keystore/focusflow-release.jks")
